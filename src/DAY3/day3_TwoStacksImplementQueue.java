@@ -5,7 +5,7 @@ import java.util.Stack;
 //用栈(先进后出)黑盒实现队列(先进先出)
 public class day3_TwoStacksImplementQueue {
 
-	public static class TwoStackQueue{
+	public static class TwoStackQueue<T>{
 		public Stack<Integer> stackPush;
 		public Stack<Integer> stackPop;
 
