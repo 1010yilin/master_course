@@ -29,13 +29,19 @@ public class Code03_ReversePair {
 			res += arr[p1] > arr[p2] ? p2-mid : 0;
 			helper[h--] = arr[p1] > arr[p2] ? arr[p1--] : arr[p2--];
 		}
-		while(p1<=mid){
-			helper[h++] = arr[p1++];
+		while(p1>=L){
+			helper[h--] = arr[p1--];
 		}
-		while (p2<=R){
-			helper[h++] = arr[p2++];
+		while (p2>=mid+1){
+			helper[h--] = arr[p2--];
 		}
+
+		for (int i = 0; i < helper.length; i++) {
+			arr[L + i] = helper[i];
+		}
+
 		return res;
+
 
 	}
 

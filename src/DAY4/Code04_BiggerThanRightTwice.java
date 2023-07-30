@@ -44,7 +44,9 @@ public class Code04_BiggerThanRightTwice {
 		while (p2<=r){
 			helper[h++] = arr[p2++];
 		}
-
+		for (int i = 0; i < helper.length; i++) {
+			arr[l + i] = helper[i];
+		}
 		return ans;
 	}
 }
